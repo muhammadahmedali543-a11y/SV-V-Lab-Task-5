@@ -1,7 +1,7 @@
 
 Task 1: Identify Operations
 
-OP-Id | Operation                        | Purpose 
+OP-Id |   Operation                        |  Purpose 
 
 OP-01 | Perform Sensor Self-Check        | Check that essential sensors are working.
 
