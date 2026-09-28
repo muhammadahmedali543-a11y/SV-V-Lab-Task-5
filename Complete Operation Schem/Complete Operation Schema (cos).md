@@ -1,52 +1,40 @@
 
-##Complete Operation Schema
+## Complete Operations Schema
 
-OP-01 | Perform Sensor Self-Check       | Chamber is powered on              | Sensor status                         | 
+| Operation | Description | Preconditions | Inputs | Outputs |
 
-Sensors
+| OP-01 | Perform Sensor Self-Check | Chamber is powered on | Sensor status | Sensors are verified |
 
-are verified.
+| OP-02 | Check Control Devices | Chamber is powered on | Control-device status | Control devices are verified |
 
-OP-02 | Check Control Devices            | Chamber is powered on              | Control-device status                 | 
+| OP-03 | Record Artifact Information | Artifact is placed inside | Artifact ID | Artifact information is recorded |
 
-Control devices are verified.
+| OP-04 | Load Environmental Profile | Artifact information is recorded | Environmental limits | Environmental profile is 
 
-OP-03 | Record Artifact Information      | Artifact is placed inside          | Artifact ID                           | 
+loaded |
 
-Artifact information is recorded.
+| OP-05 | Monitor Environment | Sensors are working | Temperature and humidity readings | Environment is monitored |
 
-OP-04 | Load Environmental Profile       | Artifact information is recorded   | Environmental limits                  | 
+| OP-06 | Check Door Status | Chamber is operating | Door status | Door status is identified |
 
-Environmental profile is loaded.
+| OP-07 | Correct Temperature | Temperature is outside the allowed range | Current temperature and required range | 
 
-OP-05 | Monitor Environment              | Sensors are working                 | Temperature and humidity readings     | 
+Temperature correction is attempted |
 
-Environment is monitored.
+| OP-08 | Correct Humidity | Humidity is outside the allowed range | Current humidity and required range | Humidity 
 
-OP-06 | Check Door Status                | Chamber is operating                | Door status                           | 
+correction is attempted |
 
-Door status is identified.
+| OP-09 | Verify Environmental Conditions | Correction has been attempted | New sensor readings | Environmental condition is 
 
-OP-07 | Correct Temperature              | Temperature is outside allowed range| Current temperature and required range| 
+verified |
 
-Temperature correction is attempted.
+| OP-10 | Detect Vibration | Artifact is inside the chamber | Vibration reading | Significant vibration is detected, if 
 
-OP-08 | Correct Humidity                 | Humidity is outside allowed range  | Current humidity and required range   | 
+present |
 
-Humidity correction is attempted.
+| OP-11 | Handle Power Failure | Power is lost | Power status | Emergency power or safe shutdown is activated |
 
-OP-09 | Verify Environmental Conditions   | Correction has been attempted       | New sensor readings                   | 
+| OP-12 | Verify Safe Artifact Removal | Operator wants to remove artifact | Chamber and protection status | Safe artifact 
 
-Condition is verified.
-
-OP-10 | Detect Vibration                 | Artifact is inside chamber          | Vibration reading                     | 
-
-Significant vibration is detected if present.
-
-OP-11 | Handle Power Failure              | Power is lost                       | Power status                          | 
-
-Emergency power or safe shutdown is activated.
-
-OP-12 | Verify Safe Artifact Removal      | Operator wants to remove artifact  | Chamber and protection status         | 
-
-Safe artifact removal is confirmed.
+removal is confirmed |
